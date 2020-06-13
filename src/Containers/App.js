@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import CardList from '../Components/CardList'
 import Scroll from '../Components/Scroll'
 import Searchbox from '../Components/Searchbox'
+import Header from '../Components/Header'
 import './App.css'
 import {setSearchField,requestRobots} from '../actions'
 const mapStateToProps = state => {
@@ -33,7 +34,7 @@ class App extends Component {
       <h1>Loading</h1> :
     (
       <div className='tc'>
-        <h1 className='f1'>RoboFriends</h1>
+        <Header/>
         <Searchbox searchChange={onSearchChange}/>
         <Scroll>
           <CardList robots={filteredRobots}/>
